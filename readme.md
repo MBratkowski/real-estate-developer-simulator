@@ -139,3 +139,7 @@ Skontaktuj się z naszym Ekspertem ds. Zadowolenia Użytkownika*
 *Instalacja dodatków spoza oficjalnego Chrome Web Store wymaga włączenia trybu programisty. Używaj tej opcji świadomie i tylko dla zaufanych źródeł.*
 
 *Ten dodatek jest żartem i ma na celu wyśmianie nieprzejrzystych praktyk sprzedażowych. Nie ponoszę odpowiedzialności za frustrację wywołaną przypomnieniem o cenach mieszkań.*
+
+## ☕ Postaw mi kawę
+
+<a href="https://buycoffee.to/mbratkowski" target="_blank"><img src="https://buycoffee.to/img/share-button-primary.png" style="width: 351px; height: 92px" alt="Postaw mi kawę na buycoffee.to"></a>
