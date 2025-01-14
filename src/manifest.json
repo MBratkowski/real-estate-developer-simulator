@@ -5,8 +5,12 @@
   "description": "Zamienia ceny na tekst 'Zapytaj o cenę'",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+    .settings-group {
+      margin-bottom: 16px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 4px;
+    }
+    button {
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1557b0;
+    }
+    .status {
+      color: green;
+      margin-top: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-group">
+    <label>Komunikaty (jeden na linię):</label>
+    <textarea id="komunikaty"></textarea>
+  </div>
+  <div class="settings-group">
+    <label>Komunikaty FOMO (jeden na linię):</label>
+    <textarea id="fomoMessages"></textarea>
+  </div>
+  <div class="settings-group">
+    <label>Komunikaty bankowe (jeden na linię):</label>
+    <textarea id="bankMessages"></textarea>
+  </div>
+  <button id="save">Zapisz ustawienia</button>
+  <div id="status" class="status">Zapisano!</div>
+  <script src="popup.js"></script>
+</body>
+</html> 

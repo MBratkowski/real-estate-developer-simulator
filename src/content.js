@@ -24,10 +24,10 @@ function zamienCeny() {
   ];
 
   const bankMessages = [
-    "💸 Weź kredyt! Tylko 28.99% RRSO*! (*po pierwszym miesiącu wzrasta do 69.99%)",
-    "🏦 Rata już od 500 zł** (**plus ukryte opłaty, prowizje i ubezpieczenie)",
-    "📈 Sprawdź naszą ofertę ze zmiennym oprocentowaniem - co miesiąc nowa niespodzianka!",
-    "💰 RRSO tylko 25%! (nie licząc prowizji, ubezpieczenia i opłaty za prowadzenie rachunku)",
+    "💸 Weź kredyt! Tylko 28.99% RRSO!",
+    "🏦 Rata już od 500 zł",
+    "📈 Sprawdź naszą ofertę ze zmiennym oprocentowaniem!",
+    "💰 RRSO tylko 25%!",
     "🎲 Zagraj w ruletkę ze stopą WIBOR!",
     "📝 Przyjdź po kredyt, wyjdź z trzema ubezpieczeniami",
   ];
@@ -44,7 +44,7 @@ function zamienCeny() {
     ratyKwota: 'span.mli2_0[style*="font-weight: bold"]',
     ratyInfo: 'span.mli2_0[style*="font-weight: normal"]',
     dostawaInfo: 'span.mli2_0[style*="color: var(--m-color-text-secondary"]',
-    ogladalyInfo: 'span.mli2_0[style*="font-weight: normal"]',
+    ogladalyInfo: '.mgn2_12.mpof_ki.m389_6m.mwdn_1 span.mli2_0[style*="font-weight: normal"]',
   };
 
   function czyPrzetworzony(element) {
@@ -100,25 +100,13 @@ function zamienCeny() {
     document.querySelectorAll(selectors.ogladalyInfo).forEach((element) => {
       if (
         !czyPrzetworzony(element) &&
-        element.textContent.includes("kupiły ostatnio")
+        element.textContent.includes("kupiło ostatnio")
       ) {
-        element.textContent = "OGLĄDAŁO, ŚPIESZ SIĘ!!!!";
+        element.textContent = "OGLĄDAŁO OSTATNIO!!!";
         element.style.color = "#ff0000";
         element.style.fontWeight = "bold";
         element.style.fontSize = "1.1em";
         element.style.animation = "blink 1s infinite";
-
-        // Dodaj style animacji do dokumentu
-        const style = document.createElement("style");
-        style.textContent = `
-      @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
-      }
-    `;
-        document.head.appendChild(style);
-
         oznaczJakoPrzetworzony(element);
       }
     });
@@ -146,7 +134,7 @@ function zamienCeny() {
       if (!czyPrzetworzony(element) && element.textContent.includes("rat")) {
         const bankMessage =
           bankMessages[Math.floor(Math.random() * bankMessages.length)];
-        element.textContent = bankMessage + " + ubezpieczenie na życie";
+        element.textContent = bankMessage + "\nubezpieczenie na życie";
         element.style.color = "#cc0000";
         oznaczJakoPrzetworzony(element);
       }
@@ -206,7 +194,7 @@ function zamienCeny() {
           }
         });
 
-        element.style.color = "#2b2b2b";
+        element.style.color = "#ff0000";
         element.style.fontWeight = "bold";
         oznaczJakoPrzetworzony(element);
       }
